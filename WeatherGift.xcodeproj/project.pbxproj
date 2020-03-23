@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		AC52CE012429701900B882C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52CE002429701900B882C9 /* AppDelegate.swift */; };
 		AC52CE032429701900B882C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52CE022429701900B882C9 /* SceneDelegate.swift */; };
-		AC52CE052429701900B882C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52CE042429701900B882C9 /* ViewController.swift */; };
+		AC52CE052429701900B882C9 /* LocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52CE042429701900B882C9 /* LocationListViewController.swift */; };
 		AC52CE082429701900B882C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC52CE062429701900B882C9 /* Main.storyboard */; };
 		AC52CE0A2429701C00B882C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC52CE092429701C00B882C9 /* Assets.xcassets */; };
 		AC52CE0D2429701C00B882C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC52CE0B2429701C00B882C9 /* LaunchScreen.storyboard */; };
+		AC52CE152429720D00B882C9 /* WeatherLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC52CE142429720D00B882C9 /* WeatherLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC52CDFD2429701900B882C9 /* WeatherGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC52CE002429701900B882C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC52CE022429701900B882C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AC52CE042429701900B882C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC52CE042429701900B882C9 /* LocationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewController.swift; sourceTree = "<group>"; };
 		AC52CE072429701900B882C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC52CE092429701C00B882C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC52CE0C2429701C00B882C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC52CE0E2429701C00B882C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC52CE142429720D00B882C9 /* WeatherLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				AC52CE002429701900B882C9 /* AppDelegate.swift */,
 				AC52CE022429701900B882C9 /* SceneDelegate.swift */,
-				AC52CE042429701900B882C9 /* ViewController.swift */,
+				AC52CE142429720D00B882C9 /* WeatherLocation.swift */,
+				AC52CE042429701900B882C9 /* LocationListViewController.swift */,
 				AC52CE062429701900B882C9 /* Main.storyboard */,
 				AC52CE092429701C00B882C9 /* Assets.xcassets */,
 				AC52CE0B2429701C00B882C9 /* LaunchScreen.storyboard */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC52CE052429701900B882C9 /* ViewController.swift in Sources */,
+				AC52CE052429701900B882C9 /* LocationListViewController.swift in Sources */,
+				AC52CE152429720D00B882C9 /* WeatherLocation.swift in Sources */,
 				AC52CE012429701900B882C9 /* AppDelegate.swift in Sources */,
 				AC52CE032429701900B882C9 /* SceneDelegate.swift in Sources */,
 			);
