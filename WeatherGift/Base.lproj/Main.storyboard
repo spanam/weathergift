@@ -23,13 +23,13 @@
                                 <items>
                                     <barButtonItem title="Edit" id="jlN-VM-gsm">
                                         <connections>
-                                            <action selector="editButtonPressed:" destination="BYZ-38-t0r" id="Tgi-gA-NPF"/>
+                                            <action selector="editButtonPressed:" destination="BYZ-38-t0r" id="xin-5u-CeH"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="3cU-en-ju9"/>
                                     <barButtonItem title="Add Location" id="yob-zP-WxR">
                                         <connections>
-                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" id="GbM-Q0-BMQ"/>
+                                            <action selector="addButtonPressed:" destination="BYZ-38-t0r" id="Aza-0d-Yrf"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -66,9 +66,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="addBarButton" destination="yob-zP-WxR" id="7db-dB-9uu"/>
-                        <outlet property="editBarButton" destination="jlN-VM-gsm" id="jua-DU-aRL"/>
-                        <outlet property="tableView" destination="sQg-2I-fMa" id="2V0-ow-bfk"/>
+                        <outlet property="addBarButton" destination="yob-zP-WxR" id="SyK-qa-3Va"/>
+                        <outlet property="editBarButton" destination="jlN-VM-gsm" id="4A3-sX-CiO"/>
+                        <outlet property="tableView" destination="sQg-2I-fMa" id="dtb-Eq-tMS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
