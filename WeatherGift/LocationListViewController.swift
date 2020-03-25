@@ -15,13 +15,10 @@ class LocationListViewController: UIViewController {
     @IBOutlet weak var addBarButton: UIBarButtonItem!
     
     var weatherLocations: [WeatherLocation] = []
+    var selectedLocationIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        weatherLocations.append(WeatherLocation(name: "New York", latitude: 0, longitude: 0))
-        weatherLocations.append(WeatherLocation(name: "Montauk", latitude: 1, longitude: 1))
-        weatherLocations.append(WeatherLocation(name: "Key West", latitude: 2, longitude: 2))
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -55,6 +52,10 @@ class LocationListViewController: UIViewController {
 
         // Display the autocomplete view controller.
         present(autocompleteController, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        selectedLocationIndex = tableView.indexPathForSelectedRow!.row
     }
 }
 
