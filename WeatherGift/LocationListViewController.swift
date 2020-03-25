@@ -24,6 +24,16 @@ class LocationListViewController: UIViewController {
         tableView.delegate = self
     }
     
+    func saveLocations() {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(weatherLocations) {
+            UserDefaults.standard.set(encoded, forKey: "weatherLocations")
+        } else {
+            print("ERROR: Encoding failed")
+        }
+        
+    }
+    
     @IBAction func editButtonPressed(_ sender: UIBarButtonItem) {
         if tableView.isEditing {
             tableView.setEditing(false, animated: true)
@@ -39,23 +49,13 @@ class LocationListViewController: UIViewController {
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         let autocompleteController = GMSAutocompleteViewController()
         autocompleteController.delegate = self
-
-//        // Specify the place data types to return.
-//        let fields: GMSPlaceField = GMSPlaceField(rawValue: UInt(GMSPlaceField.name.rawValue) |
-//          UInt(GMSPlaceField.placeID.rawValue))!
-//        autocompleteController.placeFields = fields
-//
-//        // Specify a filter.
-//        let filter = GMSAutocompleteFilter()
-//        filter.type = .address
-//        autocompleteController.autocompleteFilter = filter
-
-        // Display the autocomplete view controller.
+        
         present(autocompleteController, animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         selectedLocationIndex = tableView.indexPathForSelectedRow!.row
+        saveLocations()
     }
 }
 
