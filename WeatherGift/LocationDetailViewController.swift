@@ -16,7 +16,16 @@ class LocationDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    
+    var systemWeatherIcons = ["clear-day": "sun.max",
+                              "clear-night": "moon.fill",
+                              "cloudy": "cloud",
+                              "fog": "cloud.fog",
+                              "partly-cloudy-day": "cloud.sun",
+                              "partly-cloudy-night": "cloud.moon.fill",
+                              "rain": "cloud.rain",
+                              "snow": "cloud.snow",
+                              "sleet": "cloud.sleet",
+                              "wind": "wind"]
     var locationIndex = 0
     
     override func viewDidLoad() {
@@ -44,6 +53,7 @@ class LocationDetailViewController: UIViewController {
                 self.placeLabel.text = weatherDetail.name
                 self.temperatureLabel.text = "\(weatherDetail.temperature)"
                 self.summaryLabel.text = weatherDetail.summary
+                self.imageView.image = UIImage(systemName: self.systemWeatherIcons[weatherDetail.dailyIcon]!)
             }
         }
     }
