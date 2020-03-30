@@ -47,6 +47,7 @@ class LocationDetailViewController: UIViewController {
         updateUserInterface()
     }
     
+    
     func clearUserInterface() {
         dateLabel.text = ""
         placeLabel.text = ""
