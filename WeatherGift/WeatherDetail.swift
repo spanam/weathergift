@@ -15,7 +15,7 @@ private let dateFormatter: DateFormatter = {
     return dateFormatter
 }()
 
-struct DailyWeatherData: Codable {
+struct DailyWeather: Codable {
     var dailyIcon: String
     var dailyWeekday: String
     var dailySummary: String
@@ -57,7 +57,7 @@ class WeatherDetail: WeatherLocation {
     var summary = ""
     var dailyIcon = ""
     var currentTime = 0.0
-    var dailyWeatherData: [DailyWeatherData] = []
+    var dailyWeatherData: [DailyWeather] = []
     
     func getData(completed: @escaping () -> () ) {
         // Note: will work for any api URL
@@ -99,7 +99,7 @@ class WeatherDetail: WeatherLocation {
                     let dailySummary = result.daily.data[index].summary
                     let dailyHigh = Int(result.daily.data[index].temperatureHigh)
                     let dailyLow = Int(result.daily.data[index].temperatureLow)
-                    let dailyWeather = DailyWeatherData(dailyIcon: dailyIcon, dailyWeekday: dailyWeekday, dailySummary: dailySummary, dailyHigh: dailyHigh, dailyLow: dailyLow)
+                    let dailyWeather = DailyWeather(dailyIcon: dailyIcon, dailyWeekday: dailyWeekday, dailySummary: dailySummary, dailyHigh: dailyHigh, dailyLow: dailyLow)
                     self.dailyWeatherData.append(dailyWeather)
                     print("Day: \(dailyWeather.dailyWeekday) High: \(dailyWeather.dailyHigh) Low \(dailyWeather.dailyLow)")
                 }
